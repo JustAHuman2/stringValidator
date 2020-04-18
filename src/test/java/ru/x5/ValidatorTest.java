@@ -7,7 +7,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class ValidatorTest {
-
+    
     private Validator validator;
 
     @Before
@@ -48,5 +48,10 @@ public class ValidatorTest {
     @Test
     public void givenInvalidString_whenValidate_thenFalse_case3() {
         assertFalse(validator.validate("AAaabbbb"));
+    }
+
+    @Test
+    public void givenInvalidString_whenValidate_thenFalse_case4() {
+        assertFalse(validator.validate("aaabbbcc"));
     }
 }
